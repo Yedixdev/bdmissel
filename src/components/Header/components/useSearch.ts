@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface Product {
   id: string;
@@ -18,44 +18,58 @@ interface UseSearchReturn {
   recommendedProducts: Product[];
   handleSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSearchClose: () => void;
+  handleSearchOpen: () => void;
 }
 
 export const useSearch = (): UseSearchReturn => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchResults, setSearchResults] = useState<Product[]>([]);
 
   // Datos de ejemplo - En producción estos vendrían de una API
   const popularSearches = [
-    'chaqueta',
-    'jeans',
-    'tenis',
-    'snoopy',
-    'harry potter',
-    'buzo',
-    'vestidos',
-    'buzos',
-    'buzo oversize',
-    'camisetas'
+    "chaqueta",
+    "jeans",
+    "tenis",
+    "snoopy",
+    "harry potter",
+    "buzo",
+    "vestidos",
+    "buzos",
+    "buzo oversize",
+    "camisetas",
   ];
 
   const recommendedProducts: Product[] = [
     {
-      id: '1',
-      name: 'Jean 90\'S vintage azul con tiro medio y bota ancha',
-      image: '/path/to/image1.jpg',
+      id: "1",
+      name: "Jean 90'S vintage azul con tiro medio y bota ancha",
+      image: "/path/to/image1.jpg",
       price: 79900,
-      discount: 27
+      discount: 27,
     },
     {
-      id: '2',
-      name: 'Pantalón cargo tiro alto kaki oscuro con cordón en cintura',
-      image: '/path/to/image2.jpg',
+      id: "2",
+      name: "Pantalón cargo tiro alto kaki oscuro con cordón en cintura",
+      image: "/path/to/image2.jpg",
       price: 119900,
-      discount: 20
+      discount: 20,
     },
     // ... más productos recomendados
   ];
+
+  const handleSearchOpen = () => {
+    setIsSearchOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleSearchClose = () => {
+    setIsSearchOpen(false);
+    
+    document.body.style.overflow = "unset";
+    setSearchTerm("");
+    setSearchResults([]);
+  };
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -64,7 +78,7 @@ export const useSearch = (): UseSearchReturn => {
     // Aquí implementarías la lógica real de búsqueda
     // Por ahora solo filtramos los productos recomendados
     if (value) {
-      const filtered = recommendedProducts.filter(product =>
+      const filtered = recommendedProducts.filter((product) =>
         product.name.toLowerCase().includes(value.toLowerCase())
       );
       setSearchResults(filtered);
@@ -73,22 +87,18 @@ export const useSearch = (): UseSearchReturn => {
     }
   };
 
-  const handleSearchClose = () => {
-    setIsSearchOpen(false);
-    setSearchTerm('');
-    setSearchResults([]);
-  };
+  
 
   // Cerrar búsqueda al presionar ESC
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         handleSearchClose();
       }
     };
 
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
   return {
@@ -100,6 +110,7 @@ export const useSearch = (): UseSearchReturn => {
     popularSearches,
     recommendedProducts,
     handleSearchChange,
-    handleSearchClose
+    handleSearchClose,
+    handleSearchOpen,
   };
-}; 
+};

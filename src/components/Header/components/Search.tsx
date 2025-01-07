@@ -4,12 +4,12 @@ import { IoSearchOutline, IoCloseOutline } from "react-icons/io5";
 export const Search = () => {
   const {
     searchTerm,
-    isSearchOpen,
-    setIsSearchOpen,
     searchResults,
+    isSearchOpen,
     popularSearches,
     recommendedProducts,
     handleSearchChange,
+    handleSearchOpen,
     handleSearchClose,
   } = useSearch();
 
@@ -17,15 +17,15 @@ export const Search = () => {
     <div className="relative">
       {/* Botón de búsqueda */}
       <IoSearchOutline
-        onClick={() => setIsSearchOpen(!isSearchOpen)}
+        onClick={handleSearchOpen}
         className="text-2xl lg:text-3xl hover:scale-110 transition-transform"
       />
 
       {/* Modal de búsqueda */}
       {isSearchOpen && (
-        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50">
+        <div className="fixed backdrop-blur-sm inset-0 z-50">
           <div className="container mx-auto max-w-4xl p-4">
-            <div className="bg-white rounded-xl shadow-xl">
+            <div className="bg-blue-500/80 rounded-xl shadow-xl">
               {/* Barra de búsqueda */}
               <div className="p-4 flex gap-4 border-b">
                 <input
