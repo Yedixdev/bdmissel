@@ -1,35 +1,22 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { MdClose } from "react-icons/md";
 import { IoCartOutline, IoSearchOutline } from "react-icons/io5";
 import { RiMenuUnfoldLine } from "react-icons/ri";
-import HeaderMobile from "./HeaderMobile";
+import { Link, useLocation } from 'react-router-dom';
+import HeaderMobile from "../HeaderMobile";
+import { Search } from './components/Search';
+import { useHeader } from './useHeader';
 
 const Header = () => {
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  }
-
-  const navItems = [
-    { name: 'Colecciones', path: '/colecciones' },
-  ];
+  const {
+    isOpen,
+    isSearchOpen,
+    isScrolled,
+    toggleMenu,
+    setIsSearchOpen,
+    navItems,
+    isActivePath
+  } = useHeader();
 
   return (
     <header 
@@ -43,7 +30,7 @@ const Header = () => {
             <Link
               to={item.path}
               className={`relative font-montserrat text-lg
-                ${location.pathname === item.path ? 'text-red-900' : 'text-gray-50 hover:text-beige2'}`}
+                ${isActivePath(item.path) ? 'text-red-900' : 'text-gray-50 hover:text-beige2'}`}
             >
               {item.name}
             </Link>
@@ -55,7 +42,7 @@ const Header = () => {
 
       <div className="flex items-center gap-3">
         <div className="text-white cursor-pointer flex gap-3 items-center">
-          <IoSearchOutline className="text-2xl lg:text-3xl hover:scale-110 transition-transform" />
+           <Search />
           <IoCartOutline className="text-2xl lg:text-3xl hover:scale-110 transition-transform" />
         </div>
         <div className="lg:hidden">

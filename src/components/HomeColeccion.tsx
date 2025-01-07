@@ -102,8 +102,8 @@ const SectionColeccion = () => {
               <button className="px-8 py-4 rounded-lg border-2 border-white/30 bg-black/50 
               text-white font-montserrat text-lg uppercase tracking-wider
               transform -translate-y-10 group-hover:translate-y-0 transition-all duration-500
-              hover:bg-white hover:text-black hover:border-white
-              shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+               hover:border-white
+              shadow-[0_0_10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_20px_rgba(255,255,255,0.5)]">
                 Ver más
               </button>
             </div>
