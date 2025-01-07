@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MdClose } from "react-icons/md";
 import { IoCartOutline, IoSearchOutline } from "react-icons/io5";
@@ -9,6 +9,19 @@ import HeaderMobile from "./HeaderMobile";
 const Header = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,12 +29,14 @@ const Header = () => {
 
   const navItems = [
     { name: 'Colecciones', path: '/colecciones' },
-    { name: 'Soporte', path: '/soporte' },
   ];
 
   return (
-    <header className="w-full fixed bg-black h-14 lg:h-16 flex justify-between items-center px-4 lg:px-8 shadow-2xl z-50">
-
+    <header 
+      className={`w-full fixed h-14 lg:h-16 flex justify-between items-center px-4 lg:px-8 shadow-2xl z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-black'
+      }`}
+    >
       <nav className="lg:flex gap-5 hidden">
         {navItems.map((item) => (
           <div key={item.path}>
@@ -40,8 +55,8 @@ const Header = () => {
 
       <div className="flex items-center gap-3">
         <div className="text-white cursor-pointer flex gap-3 items-center">
-          <IoSearchOutline className="text-2xl lg:text-3xl" />
-          <IoCartOutline className="text-2xl lg:text-3xl" />
+          <IoSearchOutline className="text-2xl lg:text-3xl hover:scale-110 transition-transform" />
+          <IoCartOutline className="text-2xl lg:text-3xl hover:scale-110 transition-transform" />
         </div>
         <div className="lg:hidden">
           <div onClick={toggleMenu} className="cursor-pointer">
