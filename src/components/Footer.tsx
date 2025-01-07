@@ -1,33 +1,32 @@
-import { FaInstagram, FaWhatsapp, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black/80 backdrop-blur-sm border-t border-red-800/30 mt-20 flex justify-center items-center">
-      <div className="max-w-[1500px] mx-auto px-4 py-12">
-        {/* Grid principal */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <footer className="w-full bg-black/80 backdrop-blur-sm border-t border-red-800/30 mt-20">
+      <div className="w-full max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        {/* Contenedor principal - centrado con flex */}
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Logo y descripción */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-display 
+          <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
+            <h3 className="text-4xl sm:text-5xl lg:text-6xl font-display 
               bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
               BDMissel
             </h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm sm:text-base mt-4">
               Transformando tu estilo con diseños únicos y personalizados.
-              Rock, Anime, y más.
             </p>
           </div>
 
           {/* Enlaces rápidos */}
-          <div>
-            <h4 className="text-white font-display mb-4">Enlaces Rápidos</h4>
-            <ul className="space-y-2">
-              {['Inicio', 'Colecciones', 'Personalizar', 'Sobre Nosotros'].map((item) => (
+          <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
+            <h4 className="text-white font-display text-lg sm:text-xl mb-4">Enlaces Rápidos</h4>
+            <ul className="space-y-2 sm:space-y-3">
+              {['Inicio', 'Colecciones', 'Sobre Nosotros'].map((item) => (
                 <li key={item}>
                   <Link 
                     to="/" 
-                    className="text-gray-400 hover:text-red-500 transition-colors duration-300"
+                    className="text-gray-400 hover:text-red-500 transition-colors duration-300 text-sm sm:text-base"
                   >
                     {item}
                   </Link>
@@ -37,42 +36,45 @@ const Footer = () => {
           </div>
 
           {/* Contacto */}
-          <div>
-            <h4 className="text-white font-display mb-4">Contacto</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>WhatsApp: +57 123 456 7890</li>
+          <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
+            <h4 className="text-white font-display text-lg sm:text-xl mb-4">Contacto</h4>
+            <ul className="space-y-2 sm:space-y-3 text-gray-400 text-sm sm:text-base">
               <li>Email: info@bdmissel.com</li>
+              <li>Tel: +57 123 456 7890</li>
               <li>Bogotá, Colombia</li>
             </ul>
           </div>
 
           {/* Redes sociales */}
-          <div>
-            <h4 className="text-white font-display mb-4">Síguenos</h4>
-            <div className="flex gap-4">
+          <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
+            <h4 className="text-white font-display text-lg sm:text-xl mb-4">Síguenos</h4>
+            <div className="flex flex-col gap-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                className="text-gray-400 hover:text-red-500 transition-colors duration-300">
-                <FaInstagram size={24} />
+                className="text-gray-400 hover:text-red-500 transition-colors duration-300 flex items-center gap-2">
+                <FaInstagram  className="text-2xl " />
+                <span className="text-gray-400 hover:text-red-500 transition-colors duration-300 text-sm sm:text-base">Instagram</span>
               </a>
-              <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer"
-                className="text-gray-400 hover:text-red-500 transition-colors duration-300">
-                <FaWhatsapp size={24} />
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-500 transition-colors duration-300 flex items-center gap-2">
+                <FaFacebook  className="text-2xl" />
+                <span className="text-gray-400 hover:text-red-500 transition-colors duration-300 text-sm sm:text-base">Facebook</span>
               </a>
               <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"
-                className="text-gray-400 hover:text-red-500 transition-colors duration-300">
-                <FaTiktok size={24} />
+                className="text-gray-400 hover:text-red-500 transition-colors duration-300 flex items-center gap-2">
+                <FaTiktok  className="text-2xl" />
+                <span className="text-gray-400 hover:text-red-500 transition-colors duration-300 text-sm sm:text-base">TikTok</span>
               </a>
             </div>
           </div>
         </div>
 
         {/* Línea separadora con gradiente */}
-        <div className="h-px bg-gradient-to-r from-transparent via-red-800/30 to-transparent my-8" />
+        <div className="h-px bg-gradient-to-r from-transparent via-red-800/30 to-transparent my-6 sm:my-8" />
 
         {/* Copyright */}
-        <div className="text-center text-gray-500 text-sm">
+        <div className="text-center text-gray-500 text-xs sm:text-sm">
           <p>© {new Date().getFullYear()} BDMissel. Todos los derechos reservados.</p>
-          <div className="mt-2 space-x-4">
+          <div className="mt-2 space-x-2 sm:space-x-4">
             <Link to="/privacy" className="hover:text-red-500 transition-colors duration-300">
               Política de Privacidad
             </Link>
