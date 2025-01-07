@@ -8,7 +8,7 @@ interface ClothingOption {
 }
 
 const CLOTHING_OPTIONS: ClothingOption[] = [
-  { id: 'tshirt', name: 'Camiseta', image: '/images/tshirt-template.png', basePrice: 25000 },
+  { id: 'tshirt', name: 'Camiseta', image: '../assets/img/camisa-preview.png', basePrice: 25000 },
   { id: 'hoodie', name: 'Buzo', image: '/images/hoodie-template.png', basePrice: 45000 },
   { id: 'jogger', name: 'Jogger', image: '/images/jogger-template.png', basePrice: 35000 },
 ];
@@ -121,7 +121,6 @@ const CustomClothingDesigner = () => {
                     style={{ backgroundColor: COLORS.find(c => c.id === selectedColor)?.hex }}
                   />
                   
-                  {/* Imagen subida por el usuario */}
                   {uploadedImage && (
                     <div className="absolute inset-0 flex items-center justify-center p-8">
                       <img 
@@ -132,7 +131,6 @@ const CustomClothingDesigner = () => {
                     </div>
                   )}
 
-                  {/* Mensaje si no hay imagen subida */}
                   {!uploadedImage && (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <p className="text-white/60 text-center px-4">
@@ -148,7 +146,6 @@ const CustomClothingDesigner = () => {
               )}
             </div>
 
-            {/* Información adicional */}
             {selectedClothing && selectedColor && (
               <div className="mt-4 text-white/80">
                 <p className="text-sm">

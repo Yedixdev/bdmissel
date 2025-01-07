@@ -34,7 +34,7 @@ const WelcomeFooter: React.FC = () => {
          initial={{ opacity: 0, y: 20 }}
          whileInView={{ opacity: 1, y: 0 }}
          transition={{ delay: 0.1 }}
-         className="max-w-[1500px] mx-auto flex justify-evenly gap-5 lg:gap-12 flex-wrap mt-32 md:mt-14 mb-5 relative z-10">
+         className="max-w-[1500px] mx-auto flex justify-evenly gap-3 lg:gap-12 flex-wrap mt-32 md:mt-14 mb-5 relative z-10">
          
          {sectionItems.map((item, index) => (
             <motion.div 
@@ -43,7 +43,7 @@ const WelcomeFooter: React.FC = () => {
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ delay: index * 0.2 }}
                className="flex items-center rounded-2xl w-[300px] md:w-[350px] lg:w-[400px] h-24 md:h-28 lg:h-32 
-               border border-red-800/30 gap-4 bg-black/80 px-4 
+               border border-red-800/30 gap-4 bg-black px-4 
                shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(220,38,38,0.2)]
                backdrop-blur-sm transition-all duration-300 hover:border-red-600/50 group"
             >
@@ -55,7 +55,6 @@ const WelcomeFooter: React.FC = () => {
                      transition-transform duration-300 group-hover:scale-110
                      drop-shadow-[0_0_8px_rgba(220,38,38,0.3)]" 
                   />
-                  {/* Efecto de brillo en el icono */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/10 to-transparent 
                      opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                </div>
