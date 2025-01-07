@@ -1,9 +1,8 @@
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Welcome from "../components/Welcome";
 import SectionColeccion from "../components/HomeColeccion";
 import WelcomeFooter from "../components/WelcomeFooter";
 import HomeDescription from "../components/HomeDescription";
-import CustomClothingDesigner from "../components/CustomClothingDesigner";
 import Footer from "../components/Footer";
 const Inicio = () => {
   return (
@@ -14,7 +13,6 @@ const Inicio = () => {
       <Welcome />
       <WelcomeFooter />
       <SectionColeccion />
-      <CustomClothingDesigner />
       <HomeDescription />
       <Footer />
     </div>

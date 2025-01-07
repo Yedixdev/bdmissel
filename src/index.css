@@ -10,114 +10,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Boton con el estilo amarillo --------------------------------------------------- */
-.contact-btn-form-home {
-  background: linear-gradient(90deg, #b69f57, #c7a17c, #efdab8, #b69f57);
-  background-size: 200% 100%;
-  color: #101010;
-  font-size: 18px;
-  font-weight: 600;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  animation: gradientEffect 4s ease-in-out infinite,
-    shadowEffect 4s ease-in-out infinite;
-}
-.contact-btn-form-home:hover {
-  color: #dddddd;
-  background-size: 200% 100%;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+html::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: #000;
 }
 
-.btn-about-us {
-  background: linear-gradient(90deg, #e0e0e0, #b69f57, #e0e0e0, #081628);
-  background-size: 200% 100%;
-  font-size: 18px;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  animation: gradientEffect 8s ease-in-out infinite,
-    shadowEffect 8s ease-in-out infinite;
-  transition: transform 0.2s ease, box-shadow 0.2s ease,
-    background-color 0.2s ease, color 0.2s ease, font-weight 0.2s ease,
-    background-size 0.2s ease;
-  border-radius: 8px;
-  box-shadow: 0 0 15px 0 #1a1a1a;
-}
-
-.btn-about-us:hover {
-  background: linear-gradient(90deg, #b69f57, #efd073, #7d6d3f, #b69f57);
-  background-size: 200% 100%;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 5px 10px #1a1a1a;
-  transform: translateY(-5px);
-}
-
-.plant-bg-black {
-  background: linear-gradient(
-    90deg,
-    #012b20,
-    hsl(56, 57%, 17%),
-    #012b20,
-    #012b20
-  );
-  background-size: 200% 100%;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  animation: gradientEffect 6s ease-in-out infinite,
-    shadowEffect 6s ease-in-out infinite;
-  transition: transform 2s ease, box-shadow 2s ease, background-color 2s ease,
-    color 2s ease, font-weight 2s ease, background-size 2s ease;
-}
-
-/*Boton negro*/
-/* Estilo base para el botón */
-.btn-bg-black {
-  background: linear-gradient(90deg, #000000, #555555, #000000, #000000);
-  background-size: 200% 100%;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  animation: gradientEffect 4s ease-in-out infinite,
-    shadowEffect 4s ease-in-out infinite;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease,
-    background-size 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-bg-black:hover {
-  transform: scale(1.1);
-  background: linear-gradient(90deg, #c0c0c0, #d4af37, #c0c0c0);
-  color: #ffffff;
-}
-
-.btn-bg-img {
-  background: linear-gradient(90deg, #000000, #555555, #000000, #000000);
-  background-size: 200% 100%;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  animation: gradientEffect 4s ease-in-out infinite,
-    shadowEffect 4s ease-in-out infinite;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease,
-    background-size 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-@keyframes gradientEffect {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes shadowEffect {
-  0% {
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.7);
-  }
-  100% {
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  }
+html::-webkit-scrollbar-thumb {
+  background-color: #dc2626;
+  border-radius: 1rem;
 }
