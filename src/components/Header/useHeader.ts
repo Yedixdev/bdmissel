@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 interface UseHeaderReturn {
   isOpen: boolean;
@@ -7,7 +7,7 @@ interface UseHeaderReturn {
   isScrolled: boolean;
   toggleMenu: () => void;
   setIsSearchOpen: (open: boolean) => void;
-  navItems: Array<{ name: string; path: string; }>;
+  navItems: Array<{ name: string; path: string }>;
   isActivePath: (path: string) => boolean;
 }
 
@@ -21,10 +21,12 @@ export const useHeader = (): UseHeaderReturn => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+        
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -32,9 +34,7 @@ export const useHeader = (): UseHeaderReturn => {
 
   const isActivePath = (path: string) => location.pathname === path;
 
-  const navItems = [
-    { name: 'Colecciones', path: '/colecciones' },
-  ];
+  const navItems = [{ name: "Colecciones", path: "/colecciones" }];
 
   return {
     isOpen,
@@ -43,6 +43,6 @@ export const useHeader = (): UseHeaderReturn => {
     toggleMenu,
     setIsSearchOpen,
     navItems,
-    isActivePath
+    isActivePath,
   };
 };
