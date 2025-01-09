@@ -1,6 +1,6 @@
 import Header from "../components/Header/Header";
 import Welcome from "../components/Welcome";
-import SectionColeccion from "../components/HomeColeccion";
+import SectionColeccion from "../components/Coleccion/HomeColeccion";
 import WelcomeFooter from "../components/WelcomeFooter";
 import HomeDescription from "../components/HomeDescription";
 import Footer from "../components/Footer";

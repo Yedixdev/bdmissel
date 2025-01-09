@@ -4,7 +4,7 @@ import We from "@/assets/img/we.png";
 const Welcome = () => {
   return (
     <main className="relative z-10 text-center flex flex-col items-center w-full px-4 md:px-8 mt-20 lg:mt-20">
-      <h1 className="text-6xl sm:text-9xl lg:text-[180px] font-extrabold font-display leading-tight relative z-10  lg:mt-10 ml-20">
+      <h1 className="text-6xl sm:text-9xl lg:text-[180px] font-extrabold font-display leading-tight relative z-10  lg:mt-10 ml-20 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
         Bdmissel
       </h1> 
       <p className="w-44 lg:w-[750px] text-base lg:text-2xl font-montserrat  my-5 relative z-10 ml-24">

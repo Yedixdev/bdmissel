@@ -5,9 +5,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-black/80 backdrop-blur-sm border-t border-red-800/30 mt-20">
       <div className="w-full max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-        {/* Contenedor principal - centrado con flex */}
         <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-8 sm:gap-12 lg:gap-16">
-          {/* Logo y descripción */}
           <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
             <h3 className="text-4xl sm:text-5xl lg:text-6xl font-display 
               bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
@@ -17,8 +15,6 @@ const Footer = () => {
               Transformando tu estilo con diseños únicos y personalizados.
             </p>
           </div>
-
-          {/* Enlaces rápidos */}
           <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
             <h4 className="text-white font-display text-lg sm:text-xl mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2 sm:space-y-3">
@@ -34,8 +30,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Contacto */}
           <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
             <h4 className="text-white font-display text-lg sm:text-xl mb-4">Contacto</h4>
             <ul className="space-y-2 sm:space-y-3 text-gray-400 text-sm sm:text-base">
@@ -44,8 +38,6 @@ const Footer = () => {
               <li>Bogotá, Colombia</li>
             </ul>
           </div>
-
-          {/* Redes sociales */}
           <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
             <h4 className="text-white font-display text-lg sm:text-xl mb-4">Síguenos</h4>
             <div className="flex flex-col gap-4">
@@ -68,10 +60,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Línea separadora con gradiente */}
         <div className="h-px bg-gradient-to-r from-transparent via-red-800/30 to-transparent my-6 sm:my-8" />
 
-        {/* Copyright */}
         <div className="text-center text-gray-500 text-xs sm:text-sm">
           <p>© {new Date().getFullYear()} BDMissel. Todos los derechos reservados.</p>
           <div className="mt-2 space-x-2 sm:space-x-4">
