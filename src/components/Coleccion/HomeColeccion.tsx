@@ -27,11 +27,12 @@ const sectionColection: SectionColection[] = [
   { title: "Jogger Oversize", image: YoggerOversize },
   { title: "Pantalonetas", image: Pantalonetas },
   { title: "Buzos", image: Buzos },
-  { title: "Camibuzos", image: "image1.jpg" },
   { title: "Camisas Esqueleto", image: CamisasEsqueleto },
   { title: "Jogger Normal", image: Yogger },
+  { title: "Gorras", image: "" },
   { title: "Bordados Personalizados", image: Bordados },
   { title: "Estampados Personalizados", image: Estampados },
+
 ];
 
 const SectionColeccion = () => {
