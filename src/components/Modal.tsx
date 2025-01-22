@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+
+
 interface Product {
   title: string;
   sizes?: string[];
@@ -83,12 +85,45 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
           <p className="text-gray-200 my-2 hidden lg:flex text-left">{product.details}</p>
           <p className="text-xl bg-red-600/30 rounded-sm p-2">Precio: {product.price} COP</p>
 
+          {/* Colors Section */}
+          <div className="w-full mt-4">
+            <h3 className="text-lg font-semibold mb-2 text-left">Colores disponibles:</h3>
+            <ul className="flex flex-wrap gap-2">
+              {product.colors?.length ? (
+                product.colors.map((color, index) => (
+                  <li key={index} className="px-4 py-2 border border-red-600/30 text-gray-300 hover:border-red-600/50 hover:text-white transition-all duration-300 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] cursor-pointer">
+                    {color}
+                  </li>
+                ))
+              ) : (
+                <li className="px-4 py-2 border border-red-600/30 text-gray-400">No disponible</li>
+              )}
+            </ul>
+          </div>
+
+          {/* Sizes Section */}
+          <div className="w-full mt-4">
+            <h3 className="text-lg font-semibold mb-2 text-left">Tallas disponibles:</h3>
+            <ul className="flex flex-wrap gap-2">
+              {product.sizes?.length ? (
+                product.sizes.map((size, index) => (
+                  <li key={index} className="px-4 py-2 border border-red-600/30 text-gray-300 hover:border-red-600/50 hover:text-white transition-all duration-300 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] cursor-pointer">
+                    {size}
+                  </li>
+                ))
+              ) : (
+                <li className="px-4 py-2 border border-red-600/30 text-gray-400">No disponible</li>
+              )}
+            </ul>
+          </div>
+
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 w-full mt-4">
-            <button 
-              className="w-full sm:w-auto px-6 py-3 bg-red-600/80 text-white hover:bg-red-500 transition-all duration-300 shadow-lg hover:shadow-red-500/30"
-            >
+            <button className="w-full sm:w-auto px-6 py-3 bg-red-600/80 text-white hover:bg-red-500 transition-all duration-300 shadow-lg hover:shadow-red-500/30">
               Agregar al carrito
+            </button>
+            <button className="w-full sm:w-auto px-6 py-3 bg-green-600/80 text-white hover:bg-green-500 transition-all duration-300 shadow-lg hover:shadow-green-600/30">
+              Comprar ahora
             </button>
           </div>
         </div>
