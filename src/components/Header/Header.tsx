@@ -1,11 +1,12 @@
 "use client";
 import { MdClose } from "react-icons/md";
-import { IoCartOutline, IoSearchOutline } from "react-icons/io5";
+import { IoCartOutline } from "react-icons/io5";
 import { RiMenuUnfoldLine } from "react-icons/ri";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HeaderMobile from "../HeaderMobile";
 import { Search } from "./components/Search";
 import { useHeader } from "./useHeader";
+// import Cart from "../Cart";
 
 const Header = () => {
   const {
@@ -45,6 +46,7 @@ const Header = () => {
       <div className="flex items-center gap-3">
         <div className="text-white cursor-pointer flex gap-3 items-center">
           <Search />
+          {/* <Cart/> */}
           <IoCartOutline className="text-2xl lg:text-3xl hover:scale-110 transition-transform" />
         </div>
         <div className="lg:hidden">

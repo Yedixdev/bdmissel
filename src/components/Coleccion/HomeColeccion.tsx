@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Yogger from '../../assets/img/yogger.jpg';
 import Sacos from '../../assets/img/sacos.jpg';
 import Buzos from '../../assets/img/buzo.jpg';
 import Camisas from '../../assets/img/camisas.jpg';
 import Pantalonetas from '../../assets/img/pantalonetas.jpg';
 import Bordados from '../../assets/img/bordados.jpg';
+import Gorras from '../../assets/img/Gorra.png';
 import Estampados from '../../assets/img/estampados.jpg';
 import CamisasEsqueleto from '../../assets/img/camisa-esqueleto.jpg';
 import CamisasOversize from '../../assets/img/camisa-oversize.jpg';
@@ -28,8 +28,7 @@ const sectionColection: SectionColection[] = [
   { title: "Pantalonetas", image: Pantalonetas },
   { title: "Buzos", image: Buzos },
   { title: "Camisas Esqueleto", image: CamisasEsqueleto },
-  { title: "Jogger Normal", image: Yogger },
-  { title: "Gorras", image: "" },
+  { title: "Gorras", image: Gorras },
   { title: "Bordados Personalizados", image: Bordados },
   { title: "Estampados Personalizados", image: Estampados },
 

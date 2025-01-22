@@ -34,7 +34,7 @@ const WelcomeFooter: React.FC = () => {
          initial={{ opacity: 0, y: 20 }}
          whileInView={{ opacity: 1, y: 0 }}
          transition={{ delay: 0.1 }}
-         className="max-w-[1500px] mx-auto flex justify-evenly gap-3 lg:gap-12 flex-wrap mt-32 md:mt-14 mb-5 relative z-10">
+         className="max-w-[1500px] mx-auto flex justify-evenly gap-3 lg:gap-12  lg:mt-20 flex-wrap mt-32 md:mt-14 mb-5 relative z-10">
          
          {sectionItems.map((item, index) => (
             <motion.div 
