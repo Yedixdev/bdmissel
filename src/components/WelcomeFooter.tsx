@@ -61,11 +61,11 @@ const WelcomeFooter: React.FC = () => {
 
                <div className="font-lato relative">
                   <div className="text-lg md:text-xl lg:text-2xl font-semibold text-white 
-                     group-hover:text-red-600 transition-colors duration-300">
+                     group-hover:text-red-600 transition-colors duration-300 text-center lg:text-start">
                      {item.title}
                   </div>
                   <div className="text-sm md:text-base lg:text-lg text-gray-400 
-                     group-hover:text-gray-300 transition-colors duration-300">
+                     group-hover:text-gray-300 transition-colors duration-300 text-center lg:text-start">
                      {item.description}
                   </div>
                   {/* Línea decorativa */}

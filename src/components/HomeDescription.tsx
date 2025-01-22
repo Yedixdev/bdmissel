@@ -1,6 +1,6 @@
 const HomeDescription = () => {
   return (
-    <div className="w-full max-w-[1500px] mx-auto py-20 px-4">
+    <div className="w-full max-w-[1500px] mx-auto py-5 px-4">
       {/* Contenedor principal con efecto de fondo */}
       <div className="relative overflow-hidden rounded-2xl bg-black/40 backdrop-blur-sm 
         border border-red-800/30 p-8 lg:p-12
@@ -21,28 +21,8 @@ const HomeDescription = () => {
           </h2>
 
           <p className="text-lg lg:text-xl font-montserrat text-gray-300 leading-relaxed">
-            En <span className="text-red-500 font-semibold">BDMissel</span>, transformamos tus ideas en prendas únicas que cuentan tu historia.
-            Ya sea que te inspire el mundo del anime, el rock, o quieras lucir un estilo galáctico,
-            estamos aquí para hacer realidad tu visión.
+            En <span className="text-red-600 font-semibold">BDMissel</span>, Todos nuestros productos y prendas son completamente personalizables, ya sea con bordados o estampados según tus preferencias. Además de los diseños disponibles, podemos crear el diseño que desees. Contamos con una amplia gama de colores y tallas, y si no lo tenemos, lo conseguimos. ¡Comunícate con nosotros a través de <span className="font-semibold text-red-600">WhatsApp</span> para más detalles!
           </p>
-
-          <div className="pt-8">
-            <p className="text-xl lg:text-2xl font-display text-white/90 italic">
-              "Porque tu ropa debe ser tan única como tú"
-            </p>
-          </div>
-
-          {/* Badges o etiquetas de estilos */}
-          <div className="flex flex-wrap justify-center gap-4 pt-8">
-            {['Otaku', 'Rock', 'Anime', 'Metal', 'Cyberpunk', 'Galáctico'].map((style) => (
-              <span key={style} 
-                className="px-4 py-2 rounded-full text-sm 
-                bg-black/50 border border-red-800/30
-                text-white/80 font-montserrat tracking-wider">
-                {style}
-              </span>
-            ))}
-          </div>
         </div>
 
         {/* Líneas decorativas esquina opuesta */}
