@@ -47,15 +47,15 @@ const ProductBuy: React.FC<ProductBuyProps> = ({ product }) => {
   };
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 relative z-50">
       <div className="flex justify-start items-start flex-col gap-3">
-        <h3 className="font-semibold">Selecciona un color:</h3>
+        <h3 className="font-semibold text-sm">Selecciona un color:</h3>
         <ul className="flex flex-wrap gap-2">
           {product.colors.map((color, index) => (
             <li
               key={index}
               onClick={() => setSelectedColor(color)}
-              className={`cursor-pointer px-4 py-2 border ${
+              className={`cursor-pointer px-2 py-1 border text-sm ${
                 selectedColor === color
                   ? "border-red-600 bg-red-900 text-red-100"
                   : "border-red-800 text-gray-200 hover:border-gray-500"
@@ -68,13 +68,13 @@ const ProductBuy: React.FC<ProductBuyProps> = ({ product }) => {
       </div>
 
       <div className="flex justify-start items-start flex-col gap-2">
-        <h3 className="font-semibold">Selecciona una talla:</h3>
+        <h3 className="font-semibold text-sm">Selecciona una talla:</h3>
         <ul className="flex flex-wrap gap-2">
           {product.sizes.map((size, index) => (
             <li
               key={index}
               onClick={() => setSelectedSize(size)}
-              className={`cursor-pointer px-4 py-2 border ${
+              className={`cursor-pointer px-2 py-1 border text-sm ${
                 selectedSize === size
                   ? "border-red-600 bg-red-900 text-red-100"
                   : "border-red-800 text-gray-200 hover:border-gray-500"
@@ -85,12 +85,12 @@ const ProductBuy: React.FC<ProductBuyProps> = ({ product }) => {
           ))}
         </ul>
       </div>
-      <div className="flex flex-col lg:flex-row gap-4">
+      <div className="flex gap-4">
         <a
           href={`https://wa.me/${whatsappNumber}?text=${generateMessage()}`}
           target="_blank"
           rel="noopener noreferrer"
-          className={`px-6 py-3 text-white font-bold rounded-lg text-center ${
+          className={`text-sm px-3 py-3 text-white font-bold rounded-lg text-center ${
             isFormComplete
               ? "border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black hover:bg-gradient-to-l hover:from-red-500 hover:via-red-700 hover:to-red-500"
               : "border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black/50 cursor-not-allowed"
@@ -101,7 +101,7 @@ const ProductBuy: React.FC<ProductBuyProps> = ({ product }) => {
 
         <button
           onClick={handleAddToCart}
-          className="px-6 py-3 border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black  hover:bg-gradient-to-l hover:from-red-500 hover:via-red-700 hover:to-red-500  text-white font-bold rounded-lg transition-all"
+          className="text-sm px-3 py-3 border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black  hover:bg-gradient-to-l hover:from-red-500 hover:via-red-700 hover:to-red-500  text-white font-semibold rounded-lg transition-all "
         >
           Agregar al Carrito
         </button>

@@ -4,11 +4,13 @@ import Inicio from './pages/Inicio';
 import Terms from './pages/Terms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ScrollToTop from './components/ScrollTop';
+import AnnounceModal from './components/AnnounceModal';
 
 const AppRoutes = () => {
   return (
     <>
     <ScrollToTop />
+    <AnnounceModal />
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/inicio" element={<Inicio />} />

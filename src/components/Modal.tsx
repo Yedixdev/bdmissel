@@ -69,15 +69,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
         <div className="flex flex-col justify-start items-start md:ml-8 mt-4 md:mt-0 w-full md:w-1/2">
           <button 
             onClick={onClose} 
-            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center border border-red-600/30 hover:border-red-600/50 text-red-500 hover:text-red-400 transition-all duration-300 hover:shadow-[0_0_10px_rgba(220,38,38,0.3)]"
+            className="absolute top-1 right-1 w-8 h-8 flex items-center justify-center text-red-500 hover:text-red-400 transition-all duration-300"
           >
             ✕
           </button>
-          <h2 className="text-2xl lg:text-3xl font-display tracking-wider mb-2 border-b-[1px] border-red-700/30 pb-2">
+          <h2 className="text-xl lg:text-3xl font-display tracking-wider mb-2 border-b-[1px] border-red-700/30 pb-2">
             {product.title}
           </h2>
           <p className="text-gray-200 my-2 hidden lg:flex text-left">{product.details}</p>
-          <p className="text-xl bg-red-600/30 rounded-sm p-2">Precio: {product.price} COP</p>
+          <p className="text-sm font-bold text-xl rounded-sm">Precio: {product.price} COP</p>
             <ProductBuy 
               product={{
                 id: product.title,

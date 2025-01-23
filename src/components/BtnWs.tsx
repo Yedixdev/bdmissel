@@ -7,7 +7,7 @@ const BtnWs: React.FC = () => {
    const encodedMessage = encodeURIComponent(message);
 
    return (
-      <div className="fixed bottom-5 right-5 z-50">
+      <div className="fixed bottom-5 right-5 z-40">
          <motion.div 
             className="relative" 
             initial={{ opacity: 0 }} 
