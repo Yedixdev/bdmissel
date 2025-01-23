@@ -77,7 +77,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
             {product.title}
           </h2>
           <p className="text-gray-200 my-2 hidden lg:flex text-left">{product.details}</p>
-          <p className="text-sm font-bold text-xl rounded-sm">Precio: {product.price} COP</p>
+          <p className="font-bold text-xl rounded-sm">Precio: {product.price} COP</p>
             <ProductBuy 
               product={{
                 id: product.title,
