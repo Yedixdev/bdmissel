@@ -19,7 +19,7 @@ const AnnounceModal: React.FC = () => {
           X
         </button>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
-          <img src={Img} alt="Anuncio" className="w-[] lg:w-[330px]" />
+          <img src={Img} alt="Anuncio" className=" lg:w-[330px]" />
           <div className="flex flex-col items-center lg:items-start p-4 mt-0 lg:mt-3 gap-5">
             <h2 className="text-2xl text-center text-black font-semibold font-display">
               Tu estilo único, a tu medida
@@ -28,7 +28,7 @@ const AnnounceModal: React.FC = () => {
               En BDMissel, personalizamos cada prenda a tu gusto, ya sea con bordados o estampados, para que tengas un diseño exclusivo. Explora nuestra amplia variedad de colores y tallas, y si no encuentras lo que buscas, ¡nosotros lo conseguimos! Si tienes una idea en mente, podemos hacerla realidad. ¡Contáctanos por WhatsApp para más detalles y haz tu pedido hoy mismo!
             </p>
             <p className="text-gray-700 text-center block lg:hidden">
-              En BDMissel, personalizamos cada prenda a tu gusto, ya sea con bordados o estampados. Explora nuestra amplia variedad de colores y tallas. Si tienes una idea en mente, podemos hacerla realidad. ¡Contáctanos por WhatsApp para más detalles!
+              En BDMissel, personalizamos cada prenda a tu gusto. Explora nuestra amplia variedad de diseños. Si tienes una idea en mente, podemos hacerla realidad ¡Contáctanos! 
             </p>
           </div>
         </div>
