@@ -16,7 +16,7 @@ const ProductBuy: React.FC<ProductBuyProps> = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const { addToCart } = useCart(); // Usar la función para agregar al carrito
 
-  const whatsappNumber = "+573154249690";
+  const whatsappNumber = "+573146757244";
 
   const isFormComplete = selectedColor && selectedSize;
 
@@ -86,26 +86,26 @@ const ProductBuy: React.FC<ProductBuyProps> = ({ product }) => {
         </ul>
       </div>
       <div className="flex flex-col lg:flex-row gap-4">
-  <a
-    href={`https://wa.me/${whatsappNumber}?text=${generateMessage()}`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`px-6 py-3 text-white font-bold rounded-lg text-center ${
-      isFormComplete
-        ? "border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black hover:bg-gradient-to-l hover:from-red-500 hover:via-red-700 hover:to-red-500"
-        : "border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black/50 cursor-not-allowed"
-    } transition-all`}
-  >
-    Comprar Ahora
-  </a>
+        <a
+          href={`https://wa.me/${whatsappNumber}?text=${generateMessage()}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`px-6 py-3 text-white font-bold rounded-lg text-center ${
+            isFormComplete
+              ? "border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black hover:bg-gradient-to-l hover:from-red-500 hover:via-red-700 hover:to-red-500"
+              : "border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black/50 cursor-not-allowed"
+          } transition-all`}
+        >
+          Comprar Ahora
+        </a>
 
-  <button
-    onClick={handleAddToCart}
-    className="px-6 py-3 border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black  hover:bg-gradient-to-l hover:from-red-500 hover:via-red-700 hover:to-red-500  text-white font-bold rounded-lgtransition-all"
-  >
-    Agregar al Carrito
-  </button>
-</div>
+        <button
+          onClick={handleAddToCart}
+          className="px-6 py-3 border border-red-600/30 bg-gradient-to-r from-black via-red-950 to-black  hover:bg-gradient-to-l hover:from-red-500 hover:via-red-700 hover:to-red-500  text-white font-bold rounded-lg transition-all"
+        >
+          Agregar al Carrito
+        </button>
+      </div>
 
     </div>
   );

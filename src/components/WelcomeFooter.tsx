@@ -55,8 +55,6 @@ const WelcomeFooter: React.FC = () => {
                      transition-transform duration-300 group-hover:scale-110
                      drop-shadow-[0_0_8px_rgba(220,38,38,0.3)]" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/10 to-transparent 
-                     opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                </div>
 
                <div className="font-lato relative">
