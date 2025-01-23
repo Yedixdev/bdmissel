@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 interface PaginationProps {
    currentPage: number;
    totalPages: number;
@@ -5,8 +6,19 @@ interface PaginationProps {
  }
  
  const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
+  
+  useEffect(() => {
+    const targetSection = document.getElementById('colecciones'); // Reemplaza con el ID de tu sección
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth', // Desplazamiento suave
+        block: 'start', // Alineación al inicio de la sección
+      });
+    }
+  }, [currentPage]); 
+
     return (
-      <div className="relative flex gap-6 mt-8 justify-center items-center">
+      <div id="nosotros" className="relative flex gap-6 mt-8 justify-center items-center">
         <button
           onClick={() => onPageChange(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}

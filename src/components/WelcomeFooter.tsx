@@ -30,7 +30,8 @@ const sectionItems: SectionItem[] = [
 
 const WelcomeFooter: React.FC = () => {
    return (
-      <motion.div 
+      <motion.div
+         id="coleccion" 
          initial={{ opacity: 0, y: 20 }}
          whileInView={{ opacity: 1, y: 0 }}
          transition={{ delay: 0.1 }}

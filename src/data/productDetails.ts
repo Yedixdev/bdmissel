@@ -156,7 +156,7 @@ export const productDetails = [
   {
     id: uuidv4(),
     title: "Pantalonetas",
-    price: 20000,
+    price: 55000,
     sizes: ["S", "M", "L"],
     colors: ["Negro", "Gris", "Otro"],
     details: "Pantalonetas ligeras para el verano, cómodas y perfectas para el calor. Con bolsillos laterales.",
@@ -192,11 +192,11 @@ export const productDetails = [
   },
   {
     id: uuidv4(),
-    title: "Gorras",
-    price: 35000,
+    title: "Gorras Personalizables",
+    price: 38000,
     sizes: ["Ajustable"],
     colors: ["Negro", "Gris", "Blanco"],
-    details: "Gorra ajustable para cualquier ocasión, ideal para el verano y el calor.",
+    details: "Gorra ajustable para cualquier ocasión, ideal para el verano y el calor 100% personalizables.",
     images: [
       Gorras1,
     ]
@@ -204,10 +204,10 @@ export const productDetails = [
   {
     id: uuidv4(),
     title: "Bordados Personalizados",
-    price: 40000,
+    // price: 40000,
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Negro", "Blanco", "Gris", "Otro"],
-    details: "Camisas o prendas personalizadas con bordados a tu elección. Hazlas únicas con tu estilo.",
+    details: "Camisas o prendas personalizadas con bordados a tu elección, varia el precio depende de la medida y su longitud, para mas detalles contactanos.",
     images: [
       Bordados1,
       Bordados2,
@@ -222,10 +222,10 @@ export const productDetails = [
   {
     id: uuidv4(),
     title: "Estampados Personalizados",
-    price: 35.00,
+    // price: 35.00,
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Negro", "Blanco", "Gris", "Otro"],
-    details: "Camisetas con estampados personalizados, ideales para eventos, marcas o para tu estilo único.",
+    details: "Camisetas con estampados personalizados, varia el precio depende de la medida y su longitud, para mas detalles contactanos.",
     images: [
       Estampados1,
       Estampados2,

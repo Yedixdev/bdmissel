@@ -7,7 +7,7 @@ const Welcome = () => {
       <h1 className="text-6xl sm:text-9xl lg:text-[180px] font-extrabold font-display leading-tight relative z-10  lg:mt-10 ml-20 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
         Bdmissel
       </h1> 
-      <p className="w-44 lg:w-[700px] text-base lg:text-xl font-montserrat  my-5 relative z-10 ml-24">
+      <p className="w-44 lg:w-[700px] md:w-[500px] *:text-base lg:text-xl font-montserrat  my-5 relative z-10 ml-24">
         Aquí no seguimos tendencias, las creamos. Personaliza tu ropa, lleva tu estilo y muestra al mundo lo que eres capaz de hacer.
       </p>
       <div className="absolute left-[-100px] top-[-40px] lg:top-[-16px] -translate-x-1/4 lg:translate-x-0 lg:left-[-100px]">
