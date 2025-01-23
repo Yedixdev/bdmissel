@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Img from '../assets/img/anuncio.png';
+import Img from '../assets/img/anuncio.svg';
 
 const AnnounceModal: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
