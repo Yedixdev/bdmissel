@@ -49,15 +49,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
               />
               <button 
                 onClick={prevImage}
-                className="flex absolute left-[-6px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full items-center justify-center border border-red-600/30 hover:border-red-600/50 text-red-500 hover:text-red-400 transition-all duration-300 bg-black/50 hover:bg-black/70"
+                className="flex absolute left-[-10px] top-1/2 -translate-y-1/2 rounded-full items-center justify-center transition-all duration-300 "
               >
-                <MdOutlineKeyboardArrowLeft className='hover:text-red-700'/>
+                <MdOutlineKeyboardArrowLeft className='text-red-700 hover:text-gray-100 text-3xl'/>
               </button>
               <button 
                 onClick={nextImage}
-                className="flex absolute right-[-6px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full items-center justify-center border border-red-600/30 hover:border-red-600/50 text-red-500 hover:text-red-400 transition-all duration-300 bg-black/50 hover:bg-black/70"
+                className="flex absolute right-[-15px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full items-center justify-center transition-all duration-300 "
               >
-                <MdOutlineKeyboardArrowRight className='hover:text-red-700'/>
+                <MdOutlineKeyboardArrowRight className='text-red-700 hover:text-gray-100 text-3xl'/>
               </button>
             </>
           ) : (
@@ -69,7 +69,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
         <div className="flex flex-col justify-start items-start md:ml-8 mt-4 md:mt-0 w-full md:w-1/2">
           <button 
             onClick={onClose} 
-            className="absolute top-1 right-1 w-8 h-8 flex items-center justify-center text-red-500 hover:text-red-400 transition-all duration-300"
+            className="absolute top-1 right-1 w-8 h-8 flex items-center justify-center text-red-500 hover:text-red-400 transition-all duration-300 text-2xl"
           >
             ✕
           </button>
