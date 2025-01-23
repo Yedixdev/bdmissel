@@ -85,7 +85,7 @@ const ProductBuy: React.FC<ProductBuyProps> = ({ product }) => {
           ))}
         </ul>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 justify-center items-center">
         <a
           href={`https://wa.me/${whatsappNumber}?text=${generateMessage()}`}
           target="_blank"
