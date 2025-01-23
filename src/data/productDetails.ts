@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 //Camisas Oversize
 import Oversize1 from "@/assets/img/product/Oversize-1.png";
 import Oversize2 from "@/assets/img/product/Oversize-2.png";
@@ -73,12 +75,13 @@ import Estampados7 from "@/assets/img/product/Estampados-7.png";
 
 export const productDetails = [
 
-   {
-     title: "Camisas Oversize",
-     price: 55000,
-     sizes: ["S", "M", "L", "XL", "XXL"],
-     colors: ["Negro", "Blanco", "Gris", "Rojo", "Azul"],
-     details: "Camisa oversize, perfecta para ti. Además, son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
+  {
+    id: uuidv4(), 
+    title: "Camisas Oversize",
+    price: 55000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Negro", "Blanco", "Gris", "Rojo", "Azul"],
+    details: "Camisa oversize, perfecta para ti. Además, son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
     images: [
       Oversize1,
       Oversize2,
@@ -87,29 +90,30 @@ export const productDetails = [
       Oversize5,
       OversizeColors
     ]
-
-   },
-   {
-     title: "Camisas Basicas",
-     price: 44000,
-     sizes: ["S", "M", "L", "XL", "XXL"],
-     colors: ["Rojo", "Azul", "Verde", "Negro"],
-     details: "Camisa básica de algodón, perfecta para cualquier ocasión. Comodidad y estilo a la vez 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
-     images: [
+  },
+  {
+    id: uuidv4(),
+    title: "Camisas Basicas",
+    price: 44000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Blanco", "Negro", "Azul", "Gris", "Otro"],
+    details: "Camisa básica de algodón, perfecta para cualquier ocasión. Comodidad y estilo a la vez 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
+    images: [
       Camisas1,
       Camisas2,
       Camisas3,
       Camisas4,
       CamisasColors
     ]
-   },
-   {
-     title: "Sacos",
-     price: 89000,
-     sizes: ["S", "M", "L", "XL", "XXL"],
-     colors: ["Negro", "Gris", "Beige"],
-     details: "Saco elegante para ocasiones formales o de negocio. Con un corte moderno y tela premium,  son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
-     images: [
+  },
+  {
+    id: uuidv4(),
+    title: "Sacos",
+    price: 89000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Negro", "Gris", "Beige"],
+    details: "Saco elegante para ocasiones formales o de negocio. Con un corte moderno y tela premium,  son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
+    images: [
       Sacos1,
       Sacos2,
       Sacos3,
@@ -118,26 +122,28 @@ export const productDetails = [
       Sacos6,
       SacosColors
     ]
-   },
-   {
-     title: "Sudaderas",
-     price: 60000,
-     sizes: ["S", "M", "L", "XL"],
-     colors: ["Negro", "Blanco", "Gris Claro"],
-     details: "Sudadera cómoda y de alta calidad,  son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
-     images: [
+  },
+  {
+    id: uuidv4(),
+    title: "Sudaderas",
+    price: 60000,
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["Negro", "Blanco", "Gris Claro"],
+    details: "Sudadera cómoda y de alta calidad,  son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
+    images: [
       Sudaderas1,
       Sudaderas2,
       Sudaderas3
     ]
-   },
-   {
-     title: "Jogger Oversize",
-     price: 95000,
-     sizes: ["M", "L", "XL"],
-     colors: ["Negro", "Blanco", "Gris oscuro"],
-     details: "Jogger oversize para mayor comodidad y estilo. Perfecto para actividades casuales o deportivas.",
-     images: [
+  },
+  {
+    id: uuidv4(),
+    title: "Jogger Oversize",
+    price: 95000,
+    sizes: ["M", "L", "XL"],
+    colors: ["Negro", "Blanco", "Gris oscuro"],
+    details: "Jogger oversize para mayor comodidad y estilo. Perfecto para actividades casuales o deportivas.",
+    images: [
       Jogger1,
       Jogger2,
       Jogger3,
@@ -146,42 +152,46 @@ export const productDetails = [
       Jogger6,
       Jogger7,
     ]
-   },
-   {
-     title: "Pantalonetas",
-     price: 20000,
-     sizes: ["S", "M", "L"],
-     colors: ["Azul marino", "Negro", "Rojo"],
-     details: "Pantalonetas ligeras para el verano, cómodas y perfectas para el calor. Con bolsillos laterales.",
-     images: [
+  },
+  {
+    id: uuidv4(),
+    title: "Pantalonetas",
+    price: 20000,
+    sizes: ["S", "M", "L"],
+    colors: ["Azul marino", "Negro", "Rojo"],
+    details: "Pantalonetas ligeras para el verano, cómodas y perfectas para el calor. Con bolsillos laterales.",
+    images: [
       Pantalonetas1,
       Pantalonetas2
-     ]
-   },
-   {
-     title: "Buzos",
-     price: 70000,
-     sizes: ["S", "M", "L", "XL", "XXL"],
-     colors: ["Gris", "Negro", "Azul marino"],
-     details: "Buzo de alta calidad con un diseño simple y elegante. Ideal para mantener el calor en invierno.",
-     images: [
+    ]
+  },
+  {
+    id: uuidv4(),
+    title: "Buzos",
+    price: 70000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Gris", "Negro", "Azul marino"],
+    details: "Buzo de alta calidad con un diseño simple y elegante. Ideal para mantener el calor en invierno.",
+    images: [
       Buzos1,
       Buzos2,
       Buzos3
-     ]
-   },
-   {
-     title: "Camisas Esqueleto",
-     price: 39000,
-     sizes: ["S", "M", "L", "XL", "XXL"],
-     colors: ["Negro", "Blanco", "Gris oscuro", "Gris claro", "Rojo"],
-     details: "Camisa con diseño de esqueleto impreso, ideal para ocasiones informales o eventos temáticos.",
-     images: [
+    ]
+  },
+  {
+    id: uuidv4(),
+    title: "Camisas Esqueleto",
+    price: 39000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Negro", "Blanco", "Gris oscuro", "Gris claro", "Rojo"],
+    details: "Camisa con diseño de esqueleto impreso, ideal para ocasiones informales o eventos temáticos.",
+    images: [
       Esqueleto1,
       Esqueleto2
-     ]
-   },
-   {
+    ]
+  },
+  {
+    id: uuidv4(),
     title: "Gorras",
     price: 35000,
     sizes: ["Ajustable"],
@@ -191,13 +201,14 @@ export const productDetails = [
       Gorras1,
     ]
     },
-    {
-     title: "Bordados Personalizados",
-     price: 40000,
-     sizes: ["S", "M", "L", "XL", "XXL"],
-     colors: ["Negro", "Blanco", "Azul"],
-     details: "Camisas o prendas personalizadas con bordados a tu elección. Hazlas únicas con tu estilo.",
-     images: [
+  {
+    id: uuidv4(),
+    title: "Bordados Personalizados",
+    price: 40000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Negro", "Blanco", "Azul"],
+    details: "Camisas o prendas personalizadas con bordados a tu elección. Hazlas únicas con tu estilo.",
+    images: [
       Bordados1,
       Bordados2,
       Bordados3,
@@ -206,15 +217,16 @@ export const productDetails = [
       Bordados6,
       Bordados7,
       Bordados8
-     ]
-   },
-   {
-     title: "Estampados Personalizados",
-     price: 35.00,
-     sizes: ["S", "M", "L", "XL", "XXL"],
-     colors: ["Rojo", "Negro", "Gris"],
-     details: "Camisetas con estampados personalizados, ideales para eventos, marcas o para tu estilo único.",
-     images: [
+    ]
+  },
+  {
+    id: uuidv4(),
+    title: "Estampados Personalizados",
+    price: 35.00,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Rojo", "Negro", "Gris"],
+    details: "Camisetas con estampados personalizados, ideales para eventos, marcas o para tu estilo único.",
+    images: [
       Estampados1,
       Estampados2,
       Estampados3,
@@ -222,6 +234,6 @@ export const productDetails = [
       Estampados5,
       Estampados6,
       Estampados7
-     ]
-   }
- ];
+    ]
+  }
+];

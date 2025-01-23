@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
-
-
+import ProductBuy from './Cart/BtnBuy';
 interface Product {
   title: string;
   sizes?: string[];
@@ -10,7 +9,6 @@ interface Product {
   price?: number;
   images?: string[];
 }
-
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -41,8 +39,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div className="relative flex flex-col md:flex-row bg-black text-white w-full md:w-[85vw] max-w-[900px] overflow-y-auto px-4 py-4 md:py-8 text-center border border-red-800/30 group shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(220,38,38,0.2)] transition-all duration-300 hover:border-red-600/50">
-        
-        {/* Image Section */}
         <div className="w-full md:w-1/2 h-[300px] md:h-auto bg-black relative flex items-center justify-center">
           {product.images && product.images.length > 0 ? (
             <>
@@ -77,55 +73,20 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
           >
             ✕
           </button>
-
           <h2 className="text-2xl lg:text-3xl font-display tracking-wider mb-2 border-b-[1px] border-red-700/30 pb-2">
             {product.title}
           </h2>
-
           <p className="text-gray-200 my-2 hidden lg:flex text-left">{product.details}</p>
           <p className="text-xl bg-red-600/30 rounded-sm p-2">Precio: {product.price} COP</p>
-
-          {/* Colors Section */}
-          <div className="w-full mt-4">
-            <h3 className="text-lg font-semibold mb-2 text-left">Colores disponibles:</h3>
-            <ul className="flex flex-wrap gap-2">
-              {product.colors?.length ? (
-                product.colors.map((color, index) => (
-                  <li key={index} className="px-4 py-2 border border-red-600/30 text-gray-300 hover:border-red-600/50 hover:text-white transition-all duration-300 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] cursor-pointer">
-                    {color}
-                  </li>
-                ))
-              ) : (
-                <li className="px-4 py-2 border border-red-600/30 text-gray-400">No disponible</li>
-              )}
-            </ul>
-          </div>
-
-          {/* Sizes Section */}
-          <div className="w-full mt-4">
-            <h3 className="text-lg font-semibold mb-2 text-left">Tallas disponibles:</h3>
-            <ul className="flex flex-wrap gap-2">
-              {product.sizes?.length ? (
-                product.sizes.map((size, index) => (
-                  <li key={index} className="px-4 py-2 border border-red-600/30 text-gray-300 hover:border-red-600/50 hover:text-white transition-all duration-300 hover:shadow-[0_0_10px_rgba(220,38,38,0.2)] cursor-pointer">
-                    {size}
-                  </li>
-                ))
-              ) : (
-                <li className="px-4 py-2 border border-red-600/30 text-gray-400">No disponible</li>
-              )}
-            </ul>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full mt-4">
-            <button className="w-full sm:w-auto px-6 py-3 bg-red-600/80 text-white hover:bg-red-500 transition-all duration-300 shadow-lg hover:shadow-red-500/30">
-              Agregar al carrito
-            </button>
-            <button className="w-full sm:w-auto px-6 py-3 bg-green-600/80 text-white hover:bg-green-500 transition-all duration-300 shadow-lg hover:shadow-green-600/30">
-              Comprar ahora
-            </button>
-          </div>
+            <ProductBuy 
+              product={{
+                id: product.title,
+                title: product.title,
+                colors: product.colors || [],
+                sizes: product.sizes || [],
+                price: product.price || 0
+              }}
+            />
         </div>
       </div>
     </div>
