@@ -1,3 +1,4 @@
+import { Element } from "react-scroll";
 import Header from "../components/Header/Header";
 import Welcome from "../components/Welcome";
 import SectionColeccion from "../components/Coleccion/HomeColeccion";
@@ -14,8 +15,12 @@ const Inicio = () => {
       </div>
       <Welcome />
       <WelcomeFooter />
-      <SectionColeccion />
-      <HomeDescription />
+      <Element name="coleccion" >
+        <SectionColeccion />
+      </Element>
+      <Element name="nosotros" >
+        <HomeDescription />
+      </Element>
       <BtnWs />
       <Footer />
     </div>

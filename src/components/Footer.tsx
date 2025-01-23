@@ -1,5 +1,6 @@
 import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   const whatsappNumber = "+573146757244";
@@ -22,16 +23,18 @@ const Footer = () => {
           <div className="w-full sm:w-[45%] lg:w-[20%] flex flex-col items-center text-center">
             <h4 className="text-white font-display text-lg sm:text-xl mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2 sm:space-y-3 flex flex-col gap-1">
-              {['Inicio', 'Colecciones'].map((item) => (
-                <li key={item}>
-                  <Link 
-                    to="/" 
-                    className="text-gray-400 hover:text-red-500 transition-colors duration-300 text-sm sm:text-base"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
+            <RouterLink to="/" className="text-gray-400 hover:text-red-500">
+              Inicio
+            </RouterLink>
+            <ScrollLink
+              to="nosotros"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-gray-400 hover:text-red-500"
+            >
+              Colecciones
+            </ScrollLink>
               <a 
                 href={`https://wa.me/${whatsappNumber}?text=${encodedMessage}`}
                 target="_blank"
@@ -78,13 +81,13 @@ const Footer = () => {
         <div className="text-center text-gray-500 text-xs sm:text-sm">
           <p>© {new Date().getFullYear()} BDMissel. Todos los derechos reservados.</p>
           <div className="mt-2 space-x-2 sm:space-x-4">
-            <Link to="/politica&privacidad" className="hover:text-red-500 transition-colors duration-300">
+            <RouterLink to="/politica&privacidad" className="hover:text-red-500 transition-colors duration-300">
               Política de Privacidad
-            </Link>
+            </RouterLink>
             <span>|</span>
-            <Link to="/terminos&condiciones" className="hover:text-red-500 transition-colors duration-300">
+            <RouterLink to="/terminos&condiciones" className="hover:text-red-500 transition-colors duration-300">
               Términos y Condiciones
-            </Link>
+            </RouterLink>
           </div>
         </div>
       </div>
