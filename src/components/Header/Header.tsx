@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { IoCartOutline } from "react-icons/io5";
-import { FaTrashAlt } from "react-icons/fa"; // Icono para eliminar
-import { useCart } from "../Cart/CartContext"; // Importar el contexto del carrito
-import HeaderWs from "./HeaderWs";
+import { FaTrashAlt } from "react-icons/fa";
+import { useCart } from "../Cart/CartContext";
 
 const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const { cart, removeFromCart } = useCart(); // No necesitamos las funciones de actualización
-
-  // Contar la cantidad total de productos y calcular el precio total
+  const { cart, removeFromCart } = useCart();
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
   const totalPrice = cart.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -19,7 +17,7 @@ const Header = () => {
     setIsCartOpen(!isCartOpen);
   };
 
-  const whatsappNumber = "+573154249690";
+  const whatsappNumber = "+573146757244";
 
   const generateCartMessage = () => {
     const baseMessage = "Hola BDMissel, me interesa la siguiente compra:\n\n";
@@ -29,20 +27,21 @@ const Header = () => {
           2
         )} x ${item.quantity} = $${(item.price * item.quantity).toFixed(2)}\n`
     ).join("\n");
-
     const closingMessage = `\n\nMe gustaría obtener más información y asesoramiento sobre estos productos.`;
     return encodeURIComponent(`${baseMessage}${productDetails}${closingMessage}`);
   };
-
   return (
     <>
       <header className="w-full fixed h-14 lg:h-16 flex justify-between items-center px-4 lg:px-8 shadow-2xl z-50 transition-all duration-300 bg-black/80 backdrop-blur-sm">
-        <div>
-          <HeaderWs />
-        </div>
-        <div className="text-3xl lg:text-5xl font-display text-white">
+        <div className="text-3xl font-display text-white">
           Bdmissel
         </div>
+        {/* <div className="flex gap-5 text-lg ml-[-120px] text-white">
+          <div>Inicio</div>
+          <div>Colecciones</div>
+          <div>Nosotros</div>
+        </div> */}
+        
         <div className="text-white cursor-pointer flex  items-center relative" onClick={toggleCart}>
           <IoCartOutline className="text-2xl lg:text-3xl hover:scale-110 transition-transform" />
           <span className="text-sm bg-red-600 text-white py-[1px] px-[7px] top-[-10px] right-[-10px] absolute rounded-full">
@@ -50,9 +49,8 @@ const Header = () => {
           </span>
         </div>
       </header>
-
       <div
-        className={`fixed top-0 right-0 h-full w-72 lg:w-96 bg-gradient-to-r from-black via-zinc-900 to-black z-50 transform ${
+        className={`fixed top-0 right-0 h-full w-72 lg:w-96  bg-gradient-to-r from-black via-zinc-950 to-black z-50 transform border-l border-red-800/30 group shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_20px_rgba(220,38,38,0.2)] transition-all duration-300 hover:border-red-600/50 ${
           isCartOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-500 ease-in-out`}
       >
@@ -65,7 +63,6 @@ const Header = () => {
             X
           </button>
         </div>
-
         <div className="p-6 space-y-6 overflow-y-auto max-h-[calc(100vh-160px)] cart-scroll">
           {cart.length > 0 ? (
             <>
@@ -102,8 +99,6 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-
-              {/* Precio total */}
               <div className="pt-6 mt-4">
                 <p className="bg-gradient-to-r from-black via-red-950 to-black text-lg font-semibold text-gray-100 text-center py-2 rounded-lg "> 
                   Total:{" "}
@@ -126,13 +121,11 @@ const Header = () => {
           )}
         </div>
       </div>
-
-      {/* Overlay para cerrar el carrito */}
       {isCartOpen && (
         <div
           className="fixed top-0 left-0 w-full h-full bg-black/50 z-40"
           onClick={toggleCart}
-        ></div>
+        />
       )}
     </>
   );

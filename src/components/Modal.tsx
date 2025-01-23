@@ -45,7 +45,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
               <img 
                 src={product.images[currentImage]} 
                 alt={`${product.title} - imagen ${currentImage + 1}`}
-                className="w-full h-full object-contain px-10"
+                className="w-72 h-72 lg:w-96 lg:h-96 object-cover px-5"
               />
               <button 
                 onClick={prevImage}
