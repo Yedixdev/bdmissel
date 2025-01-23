@@ -80,7 +80,7 @@ export const productDetails = [
     title: "Camisas Oversize",
     price: 55000,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Negro", "Blanco", "Gris", "Rojo", "Azul"],
+    colors: ["Negro", "Blanco", "Gris", "Beige", "Otro"],
     details: "Camisa oversize, perfecta para ti. Además, son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
     images: [
       Oversize1,
@@ -96,7 +96,7 @@ export const productDetails = [
     title: "Camisas Basicas",
     price: 44000,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Blanco", "Negro", "Azul", "Gris", "Otro"],
+    colors: ["Negro", "Blanco", "Gris", "Beige", "Otro"],
     details: "Camisa básica de algodón, perfecta para cualquier ocasión. Comodidad y estilo a la vez 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
     images: [
       Camisas1,
@@ -111,7 +111,7 @@ export const productDetails = [
     title: "Sacos",
     price: 89000,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Negro", "Gris", "Beige"],
+    colors: ["Negro", "Blanco", "Gris", "Beige", "Otro"],
     details: "Saco elegante para ocasiones formales o de negocio. Con un corte moderno y tela premium,  son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
     images: [
       Sacos1,
@@ -128,7 +128,7 @@ export const productDetails = [
     title: "Sudaderas",
     price: 60000,
     sizes: ["S", "M", "L", "XL"],
-    colors: ["Negro", "Blanco", "Gris Claro"],
+    colors: ["Negro", "Blanco", "Gris"],
     details: "Sudadera cómoda y de alta calidad,  son 100% personalizables, ya sea estampadas o bordadas. Solo envíanos tu diseño y crearemos la prenda de tus sueños.",
     images: [
       Sudaderas1,
@@ -141,7 +141,7 @@ export const productDetails = [
     title: "Jogger Oversize",
     price: 95000,
     sizes: ["M", "L", "XL"],
-    colors: ["Negro", "Blanco", "Gris oscuro"],
+    colors: ["Negro", "Blanco", "Gris"],
     details: "Jogger oversize para mayor comodidad y estilo. Perfecto para actividades casuales o deportivas.",
     images: [
       Jogger1,
@@ -158,7 +158,7 @@ export const productDetails = [
     title: "Pantalonetas",
     price: 20000,
     sizes: ["S", "M", "L"],
-    colors: ["Azul marino", "Negro", "Rojo"],
+    colors: ["Negro", "Gris", "Otro"],
     details: "Pantalonetas ligeras para el verano, cómodas y perfectas para el calor. Con bolsillos laterales.",
     images: [
       Pantalonetas1,
@@ -170,7 +170,7 @@ export const productDetails = [
     title: "Buzos",
     price: 70000,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Gris", "Negro", "Azul marino"],
+    colors: ["Negro", "Blanco", "Gris", "Beige", "Otro"],
     details: "Buzo de alta calidad con un diseño simple y elegante. Ideal para mantener el calor en invierno.",
     images: [
       Buzos1,
@@ -183,7 +183,7 @@ export const productDetails = [
     title: "Camisas Esqueleto",
     price: 39000,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Negro", "Blanco", "Gris oscuro", "Gris claro", "Rojo"],
+    colors: ["Negro", "Blanco", "Gris", "Beige", "Otro"],
     details: "Camisa con diseño de esqueleto impreso, ideal para ocasiones informales o eventos temáticos.",
     images: [
       Esqueleto1,
@@ -206,7 +206,7 @@ export const productDetails = [
     title: "Bordados Personalizados",
     price: 40000,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Negro", "Blanco", "Azul"],
+    colors: ["Negro", "Blanco", "Gris", "Otro"],
     details: "Camisas o prendas personalizadas con bordados a tu elección. Hazlas únicas con tu estilo.",
     images: [
       Bordados1,
@@ -224,7 +224,7 @@ export const productDetails = [
     title: "Estampados Personalizados",
     price: 35.00,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Rojo", "Negro", "Gris"],
+    colors: ["Negro", "Blanco", "Gris", "Otro"],
     details: "Camisetas con estampados personalizados, ideales para eventos, marcas o para tu estilo único.",
     images: [
       Estampados1,
